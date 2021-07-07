@@ -1,11 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="4" android:versionName="1.3" package="es.valtimoretec.valdemoroenuno" android:installLocation="auto">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="5" android:versionName="1.4" package="es.valtimoretec.valdemoroenuno" android:installLocation="auto">
 	<uses-sdk android:minSdkVersion="23" android:targetSdkVersion="30" />
 	<application android:label="ValdemoroEn1" android:usesCleartextTraffic="true" android:icon="@mipmap/icon"></application>
-  <queries>
-    <intent>
-      <action android:name="android.intent.action.DIAL" />
-      <data android:scheme="tel"/>
-    </intent>
-  </queries>
+	<queries>
+		<intent>
+			<action android:name="android.intent.action.DIAL" />
+			<data android:scheme="tel" />
+		</intent>
+	</queries>
 </manifest>
