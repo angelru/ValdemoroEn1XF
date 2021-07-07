@@ -3,14 +3,19 @@
   <img src ="/images/logo.png?raw=true" width="200" />
 </p>
 
-Es una gran agenda-base de datos que se irá llenando poco a poco, su funcionamiento es simple, elige la categoría/servicio y una vez dentro y mostrado los datos, podrás llamar al pulsar el icono de la llamada o número, también podrás hacer streetview en el mapa de google maps, ver horarios y fotos del establecimiento.
+Tu agenda de servicios en Valdemoro, toda la información en un mismo lugar.
 
-Además podrás consultar el horario en tiempo real de los autobuses urbanos e interurbanos, localiza el número de parada en la marquesina y consulta el tiempo.
-
-También podrás consultar los horarios en formato PDF.
+* **Restauración.** Listado de bares y restaurantes, horarios, fotos, carta, teléfono y ubicación. Puedes saber en un click si están abiertos, si envían comida a domicilio y consultar la carta. Llama directamente al establecimiento, haz tu pedido.
+* **Autobuses.** Consulta el horario en tiempo real de autobuses urbanos e interurbanos, localiza el número de parada en la marquesina y consulta el tiempo. También podrás consultar los horarios en formato PDF.
+* **Cercanías.** Próximamente 
 
 # History
-He decidido publicar el código fuente de mi primera aplicación en **[Xamarin Forms](https://docs.microsoft.com/en-us/xamarin/get-started/what-is-xamarin-forms)**, es un proyecto que empecé con mucha ilusión por el **2015** en **PhoneGap**, pero en **2017** decidí pasarlo a **[Xamarin Forms](https://docs.microsoft.com/en-us/xamarin/get-started/what-is-xamarin-forms)**, tiene muchas partes que no están actualizadas, y además, hay que enfocarlas de maneras diferentes, pero cuando tenga tiempo ire mejorando el código acorde con los tiempos que corren.
+Decido publicar el código fuente de mi primera aplicación en **[Xamarin Forms](https://docs.microsoft.com/en-us/xamarin/get-started/what-is-xamarin-forms)** porque creo en el trabajo en comunidad, en que todas las personas aportemos nuestro granito de arena para el avance del código libre y así aumentar nuestros conocimientos.
+
+**ValdemoroEn1** es un proyecto que empecé con mucha ilusión por el 2015 en PhoneGap, pero en 2017 decidí pasarlo a **[Xamarin Forms](https://docs.microsoft.com/en-us/xamarin/get-started/what-is-xamarin-forms)**, en el presente tiene muchas partes que no están actualizadas.
+Mi planteamiento es poder ir actualizando y mejorando algunos aspectos que hay que reenfocar.
+
+Espero que podáis aprender con el proyecto 👋🏽
 
 # Google API and Firebase Auth
 Utilizo la api de google para sacar los resultados y la autenticación con firebase.
