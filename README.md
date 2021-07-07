@@ -7,6 +7,7 @@ Tu agenda de servicios en Valdemoro, toda la información en un mismo lugar.
 
 * **Restauración.** Listado de bares y restaurantes, horarios, fotos, carta, teléfono y ubicación. Puedes saber en un click si están abiertos, si envían comida a domicilio y consultar la carta. Llama directamente al establecimiento, haz tu pedido.
 * **Autobuses.** Consulta el horario en tiempo real de autobuses urbanos e interurbanos, localiza el número de parada en la marquesina y consulta el tiempo. También podrás consultar los horarios en formato PDF.
+* **Salud.** Listado de centros médicos, gimnasios, dentistas, farmacias, fisioterapeutas y otros profesionales. Información actualizada con horarios y teléfonos de contacto.
 * **Cercanías.** Próximamente 
 
 # History
