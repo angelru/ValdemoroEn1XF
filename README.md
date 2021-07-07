@@ -25,7 +25,9 @@ Utilizo la api de google para sacar los resultados y la autenticación con fireb
 * [GoogleClientPlugin](https://github.com/CrossGeeks/GoogleClientPlugin)
 * [ValidationRulesPlugin](https://github.com/luismts/ValidationRulesPlugin)
 
-# Images
+# Screenshots
+#### Android
+
 <img src ="/images/menu.png?raw=true" width="200" /> <img src ="/images/list.png?raw=true" width="200" />
 
 <img src ="/images/transport.png?raw=true" width="200" /> <img src ="/images/realtimetransport.png?raw=true" width="200" />
