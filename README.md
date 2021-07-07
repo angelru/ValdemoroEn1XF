@@ -14,6 +14,7 @@ He decidido publicar el código fuente de mi primera aplicación en **Xamarin Fo
 * [FirebaseAuth](https://github.com/f-miyu/Plugin.FirebaseAuth)
 * [GoogleApi](https://github.com/vivet/GoogleApi)
 * [GoogleClientPlugin](https://github.com/CrossGeeks/GoogleClientPlugin)
+* [ValidationRulesPlugin](https://github.com/luismts/ValidationRulesPlugin)
 
 # Images
 <img src ="/images/menu.png?raw=true" width="200" /> <img src ="/images/list.png?raw=true" width="200" />
