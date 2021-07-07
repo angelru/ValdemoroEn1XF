@@ -4,6 +4,10 @@ Una aplicación para los ciudadanos de **Valdemoro** creada en **Xamarin Forms.*
 # Description
 He decidido publicar el código fuente de mi primera aplicación en **Xamarin Forms**, es un proyecto que empecé con mucha ilusión por el **2015** en **PhoneGap**, pero en **2017** decidí pasarlo a **Xamarin Forms**, tiene muchas partes que no están actualizadas, pero cuando tenga tiempo ire mejorando el código acorde con los tiempos que corren.
 
+Utilizo la api de google para sacar los resultados y la autenticación con firebase.
+* [Places](https://developers.google.com/maps/documentation/places/web-service/overview)
+* [Auth](https://firebase.google.com/docs/auth)
+
 # Tools used
 * [Prism](https://github.com/PrismLibrary/Prism)
 * [FFImageLoading](https://github.com/luberda-molinet/FFImageLoading)
