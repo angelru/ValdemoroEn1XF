@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<MasterDetailPage xmlns="http://xamarin.com/schemas/2014/forms"
+                  xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                  xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
+                  xmlns:fftransformations="clr-namespace:FFImageLoading.Transformations;assembly=FFImageLoading.Transformations"
+                  xmlns:controls="clr-namespace:ValdemoroEn1.Controls"
+                  xmlns:fontawesome="clr-namespace:FontAwesome"
+                  x:Class="ValdemoroEn1.Views.MenuPage">
+    <MasterDetailPage.Master>
+        <NavigationPage Title="Menu" Icon="ic_hamburger.png">
+            <x:Arguments>
+                <ContentPage NavigationPage.HasNavigationBar="False">
+                    <StackLayout Orientation="Vertical">
+                        <StackLayout BackgroundColor="{StaticResource redGeneralColor}" Padding="16" HeightRequest="160">
+                            <ffimageloading:CachedImage HorizontalOptions="Start"
+                                                        VerticalOptions="CenterAndExpand"
+			                            WidthRequest="84" HeightRequest="84"
+			                            DownsampleToViewSize="true"
+                                        ErrorPlaceholder="profile.png"
+                                        LoadingPlaceholder="profile.png"
+			                            Source="{Binding PhotoFile}">
+                                <ffimageloading:CachedImage.GestureRecognizers>
+                                    <TapGestureRecognizer Command="{Binding ShowProfileCommand}" />
+                                </ffimageloading:CachedImage.GestureRecognizers>
+                                <ffimageloading:CachedImage.Transformations>
+                                    <fftransformations:CircleTransformation BorderSize="5" BorderHexColor="#ffffff" />
+                                </ffimageloading:CachedImage.Transformations>
+                            </ffimageloading:CachedImage>
+                            <Label Style="{StaticResource labelProfile}" Text="{Binding ValdeUser.Name}" />
+                            <Label Style="{StaticResource labelProfile}" Text="{Binding ValdeUser.Email}" />
+                        </StackLayout>
+                        <ScrollView VerticalOptions="FillAndExpand">
+                            <StackLayout>
+                                <controls:StackLayoutItemsView ItemsSource="{Binding MenuItems}" />
+                                <controls:ExpandableContentView FirstIcon="{Static fontawesome:FontAwesomeIcons.Heartbeat}" Text="Salud" SecondIcon="{Binding IconExpand}">
+                                    <controls:ExpandableContentView.TemplateContent>
+                                        <controls:StackLayoutItemsView ItemsSource="{Binding SubMenuItems}" />
+                                    </controls:ExpandableContentView.TemplateContent>
+                                </controls:ExpandableContentView>
+                                <controls:StackLayoutItemsView ItemsSource="{Binding EndMenuItems}" VerticalOptions="EndAndExpand" />
+                            </StackLayout>
+                        </ScrollView>
+                    </StackLayout>
+                </ContentPage>
+            </x:Arguments>
+        </NavigationPage>
+    </MasterDetailPage.Master>
+</MasterDetailPage>

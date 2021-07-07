@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ValdemoroEn1.Views.MapsBusTransportTabPage">
+    <StackLayout Style="{StaticResource stackGeneral}" HorizontalOptions="Center" VerticalOptions="Center">
+        <Button Style="{StaticResource buttonSelectMapTransport}" BackgroundColor="{StaticResource redColor}" TextColor="{StaticResource whiteColor}" Command="{Binding OpenMapPageCommand}" CommandParameter="1" />
+        <Button Style="{StaticResource buttonSelectMapTransport}" BackgroundColor="{StaticResource greenColor}" TextColor="{StaticResource blackColor}" Command="{Binding OpenMapPageCommand}" CommandParameter="2" />
+    </StackLayout>
+</ContentPage>

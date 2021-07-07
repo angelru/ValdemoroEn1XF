@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             NavigationPage.HasNavigationBar="False"
+             x:Class="ValdemoroEn1.Views.MainPage">
+
+    <StackLayout Padding="16">
+        <StackLayout HorizontalOptions="Center" VerticalOptions="CenterAndExpand">
+            <Image Source="icon.png" />
+        </StackLayout>
+        <StackLayout Style="{StaticResource stackEndGeneral}">
+            <Button Image="googleIcon" ContentLayout="Left,16" Style="{StaticResource buttonGeneral}" Text="Iniciar sesión con Google"
+                    Command="{Binding LoginGoogleCommand}" />
+            <Button Style="{StaticResource buttonGeneral}" Text="Regístrate gratis"
+                    Command="{Binding ShowRegisterCommand}" />
+            <Label LineBreakMode="WordWrap" HorizontalTextAlignment="Center">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span Text="¿Tienes ya una cuenta? " />
+                        <Span Text="Inicia sesión" FontAttributes="Bold" />
+                    </FormattedString>
+                </Label.FormattedText>
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding ShowLoginCommand}" />
+                </Label.GestureRecognizers>
+            </Label>
+        </StackLayout>
+    </StackLayout>
+
+</ContentPage>

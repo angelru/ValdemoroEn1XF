@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:controls="clr-namespace:ValdemoroEn1.Controls" 
+             xmlns:behaviors="clr-namespace:ValdemoroEn1.Behaviors"
+             xmlns:b="clr-namespace:Prism.Behaviors;assembly=Prism.Forms"
+             Title="Iniciar sesión"
+             x:Class="ValdemoroEn1.Views.LoginPage">
+
+    <StackLayout Padding="16">
+        <Label Text="¡Espero que disfrutes de&#10;ValdemoroEn1!" FontSize="45" />
+        <Entry Style="{StaticResource entryGeneral}" Placeholder="Correo" Text="{Binding Email.Value}">
+            <Entry.Behaviors>
+                <b:EventToCommandBehavior EventName="TextChanged" Command="{Binding ValidateEmailCommand}" />
+            </Entry.Behaviors>
+            <Entry.Triggers>
+                <DataTrigger TargetType="Entry" Binding="{Binding Email.IsValid}" Value="False">
+                    <Setter Property="behaviors:LineColorBehavior.LineColor" Value="{StaticResource redColor}" />
+                </DataTrigger>
+            </Entry.Triggers>
+        </Entry>
+        <Label Text="{Binding Email.Error}" TextColor="{StaticResource redColor}" />
+        <Entry Style="{StaticResource entryGeneral}" Placeholder="Contraseña" IsPassword="True" Text="{Binding Password.Value}">
+            <Entry.Behaviors>
+                <b:EventToCommandBehavior EventName="TextChanged" Command="{Binding ValidatePasswordCommand}" />
+            </Entry.Behaviors>
+            <Entry.Triggers>
+                <DataTrigger TargetType="Entry" Binding="{Binding Password.IsValid}" Value="False">
+                    <Setter Property="behaviors:LineColorBehavior.LineColor" Value="{StaticResource redColor}" />
+                </DataTrigger>
+            </Entry.Triggers>
+        </Entry>
+        <Label Text="{Binding Password.Error}" TextColor="{StaticResource redColor}" />
+
+        <controls:TermsView />
+
+        <StackLayout Style="{StaticResource stackEndGeneral}">
+            <Button Style="{StaticResource buttonGeneral}" Text="Iniciar sesión"
+                    Command="{Binding LoginCommand}" />
+            <Label HorizontalTextAlignment="Center">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span Text="¿Has olvidado la contraseña? " />
+                        <Span Text="Pulsa aquí" FontAttributes="Bold" />
+                    </FormattedString>
+                </Label.FormattedText>
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding RecoveryPassowrdCommand}" />
+                </Label.GestureRecognizers>
+            </Label>
+        </StackLayout>
+    </StackLayout>
+
+</ContentPage>

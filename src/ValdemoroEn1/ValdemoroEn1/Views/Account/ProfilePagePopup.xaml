@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
+             xmlns:fftransformations="clr-namespace:FFImageLoading.Transformations;assembly=FFImageLoading.Transformations"
+             xmlns:fontawesome="clr-namespace:FontAwesome"
+             xmlns:b="clr-namespace:Prism.Behaviors;assembly=Prism.Forms"
+             xmlns:behaviors="clr-namespace:ValdemoroEn1.Behaviors"
+             xmlns:viewmodels="clr-namespace:ValdemoroEn1.ViewModels"
+             x:DataType="viewmodels:ProfilePagePopupViewModel"
+             NavigationPage.HasNavigationBar="False"
+             x:Class="ValdemoroEn1.Views.ProfilePagePopup">
+
+    <StackLayout Padding="16" BackgroundColor="{StaticResource whiteColor}">
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Label Grid.Column="0" FontSize="28" Text="{Static fontawesome:FontAwesomeIcons.Times}" 
+                   FontFamily="FontAwesomeSolid"
+                               TextColor="{StaticResource redGeneralColor}" HorizontalTextAlignment="Start">
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding GoBackCommand}" />
+                </Label.GestureRecognizers>
+            </Label>
+            <Label Grid.Column="1" FontSize="28" Text="{Static fontawesome:FontAwesomeIcons.Check}" 
+                   FontFamily="FontAwesomeSolid" TextColor="green"
+                               HorizontalTextAlignment="End">
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding UpdateProfileCommand}" />
+                </Label.GestureRecognizers>
+            </Label>
+        </Grid>
+
+        <StackLayout HorizontalOptions="Center">
+            <ffimageloading:CachedImage WidthRequest="96" HeightRequest="96"
+			                            DownsampleToViewSize="true"
+                                        ErrorPlaceholder="profile.png"
+                                        LoadingPlaceholder="profile.png"
+			                            Source="{Binding PhotoFile}">
+                <ffimageloading:CachedImage.Transformations>
+                    <fftransformations:CircleTransformation BorderSize="5" BorderHexColor="#000000" />
+                </ffimageloading:CachedImage.Transformations>
+            </ffimageloading:CachedImage>
+            <Label Text="Cambiar foto" FontAttributes="Bold" HorizontalTextAlignment="Center" />
+
+            <StackLayout.GestureRecognizers>
+                <TapGestureRecognizer Command="{Binding OpenCameraGalleryCommand}" />
+            </StackLayout.GestureRecognizers>
+        </StackLayout>
+
+        <Frame BackgroundColor="{StaticResource whiteColor}" VerticalOptions="CenterAndExpand">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="auto" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Label Grid.Row="0" Grid.Column="0" Style="{StaticResource iconLabelList}" 
+                       Text="{Static fontawesome:FontAwesomeIcons.Envelope}" 
+                   FontFamily="FontAwesomeSolid" />
+                <Entry Grid.Row="0" Grid.Column="1" Style="{StaticResource entryProfile}" Keyboard="Email" Placeholder="Correo" IsEnabled="False" Text="{Binding Email}" />
+                <Label Grid.Row="1" Grid.Column="0" Style="{StaticResource iconLabelList}" Text="{Static fontawesome:FontAwesomeIcons.UserEdit}" 
+                   FontFamily="FontAwesomeSolid" />
+                <Entry Grid.Row="1" Grid.Column="1" Style="{StaticResource entryProfile}" Keyboard="Plain" Placeholder="Nombre" Text="{Binding Name.Value}">
+                    <Entry.Behaviors>
+                        <b:EventToCommandBehavior EventName="TextChanged" Command="{Binding ValidateNameCommand}" />
+                    </Entry.Behaviors>
+                    <Entry.Triggers>
+                        <DataTrigger TargetType="Entry" Binding="{Binding Name.IsValid}" Value="False">
+                            <Setter Property="behaviors:LineColorBehavior.LineColor" Value="{StaticResource redColor}" />
+                        </DataTrigger>
+                    </Entry.Triggers>
+                </Entry>
+            </Grid>
+        </Frame>
+        <Label Text="{Binding Name.Error}" TextColor="{StaticResource redColor}" HorizontalTextAlignment="Center" />
+        <Button Style="{StaticResource buttonGeneral}" Text="Borrar cuenta" 
+                VerticalOptions="EndAndExpand" Command="{Binding DeleteCommand}" />
+    </StackLayout>
+
+</ContentPage>

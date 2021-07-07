@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Name="mapTransport"
+             Title="{Binding Title}"
+             x:Class="ValdemoroEn1.Views.MapBusPage">
+    <ListView CachingStrategy="RecycleElement" ItemsSource="{Binding MapsBusItem}" 
+              SelectionMode="None" Style="{StaticResource listViewGeneral}">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Grid Style="{StaticResource gridGeneral}">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="30"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="auto"/>
+                                <ColumnDefinition Width="auto"/>
+                            </Grid.ColumnDefinitions>
+                            <Frame Grid.Row="0" Grid.Column="0" Padding="0" VerticalOptions="Center" BackgroundColor="{Binding Source={x:Reference mapTransport}, Path=BindingContext.LineColor}" HeightRequest="30" WidthRequest="30" CornerRadius="10">
+                                <Label Text="{Binding Id}" FontAttributes="Bold" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" />
+                            </Frame>
+                            <Label Grid.Row="0" Grid.Column="1" FontSize="Micro" FontAttributes="Bold" VerticalTextAlignment="Center" Text="{Binding Name}" />
+                            <Button Style="{StaticResource buttonMapTransport}" Grid.Row="0" Grid.Column="2" Text="ida" Command="{Binding Source={x:Reference mapTransport}, Path=BindingContext.OpenMapUrlCommand}" CommandParameter="{Binding GoUrl}" />
+                            <Button Style="{StaticResource buttonMapTransport}" Grid.Row="0" Grid.Column="3" Text="vuelta" Command="{Binding Source={x:Reference mapTransport}, Path=BindingContext.OpenMapUrlCommand}" CommandParameter="{Binding GoBackUrl}" />
+                        </Grid>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+</ContentPage>

@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:controls="clr-namespace:ValdemoroEn1.Controls"
+             xmlns:behaviors="clr-namespace:ValdemoroEn1.Behaviors"
+             xmlns:b="clr-namespace:Prism.Behaviors;assembly=Prism.Forms"
+             Title="Registrar cuenta"
+             x:Class="ValdemoroEn1.Views.RegisterPage">
+
+    <StackLayout Padding="16">
+        <Label Text="¡Únete a&#10;ValdemoroEn1!" FontSize="45" />
+        <Entry Style="{StaticResource entryGeneral}" Placeholder="Nombre completo" Text="{Binding Name.Value}">
+            <Entry.Behaviors>
+                <b:EventToCommandBehavior EventName="TextChanged" Command="{Binding ValidateNameCommand}" />
+            </Entry.Behaviors>
+            <Entry.Triggers>
+                <DataTrigger TargetType="Entry" Binding="{Binding Name.IsValid}" Value="False">
+                    <Setter Property="behaviors:LineColorBehavior.LineColor" Value="{StaticResource redColor}" />
+                </DataTrigger>
+            </Entry.Triggers>
+        </Entry>
+        <Label Text="{Binding Name.Error}" TextColor="{StaticResource redColor}" />
+        <Entry Style="{StaticResource entryGeneral}" Placeholder="Correo" Text="{Binding Email.Value}">
+            <Entry.Behaviors>
+                <b:EventToCommandBehavior EventName="TextChanged" Command="{Binding ValidateEmailCommand}" />
+            </Entry.Behaviors>
+            <Entry.Triggers>
+                <DataTrigger TargetType="Entry" Binding="{Binding Email.IsValid}" Value="False">
+                    <Setter Property="behaviors:LineColorBehavior.LineColor" Value="{StaticResource redColor}" />
+                </DataTrigger>
+            </Entry.Triggers>
+        </Entry> 
+        <Label Text="{Binding Email.Error}" TextColor="{StaticResource redColor}" />
+        <Entry Style="{StaticResource entryGeneral}" Placeholder="Contraseña" IsPassword="True" Text="{Binding Password.Value}">
+            <Entry.Behaviors>
+                <b:EventToCommandBehavior EventName="TextChanged" Command="{Binding ValidatePasswordCommand}" />
+            </Entry.Behaviors>
+            <Entry.Triggers>
+                <DataTrigger TargetType="Entry" Binding="{Binding Password.IsValid}" Value="False">
+                    <Setter Property="behaviors:LineColorBehavior.LineColor" Value="{StaticResource redColor}" />
+                </DataTrigger>
+            </Entry.Triggers>
+        </Entry>
+        <Label Text="{Binding Password.Error}" TextColor="{StaticResource redColor}" />
+
+        <controls:TermsView />
+
+        <Button Style="{StaticResource buttonGeneral}" Text="Registrarme" VerticalOptions="EndAndExpand" 
+                Command="{Binding RegisterCommand}" />
+    </StackLayout>
+    
+</ContentPage>

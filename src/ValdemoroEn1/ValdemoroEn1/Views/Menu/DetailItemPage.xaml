@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
+             xmlns:cardsControls="clr-namespace:PanCardView.Controls;assembly=PanCardView"
+             xmlns:cards="clr-namespace:PanCardView;assembly=PanCardView"
+             xmlns:controls="clr-namespace:ValdemoroEn1.Controls"
+             x:Class="ValdemoroEn1.Views.DetailItemPage">
+    
+    <NavigationPage.TitleView>
+        <controls:LogoTitleView />
+    </NavigationPage.TitleView>
+    
+    <StackLayout>
+        <cards:CarouselView ItemsSource="{Binding PhotoItem}" IsCyclical="False">
+            <cards:CarouselView.ItemTemplate>
+                <DataTemplate>
+                    <ContentView>
+                        <ffimageloading:CachedImage HeightRequest="200" Aspect="Fill" DownsampleToViewSize="true" 
+			                        Source="{Binding .}">
+                        </ffimageloading:CachedImage>
+                    </ContentView>
+                </DataTemplate>
+            </cards:CarouselView.ItemTemplate>
+            <cardsControls:IndicatorsControl />
+        </cards:CarouselView>
+        <ScrollView>
+            <StackLayout>
+                <StackLayout BindableLayout.ItemsSource="{Binding ItemDetail}">
+                    <BindableLayout.ItemTemplate>
+                        <DataTemplate>
+                            <controls:ItemView Icon="{Binding Icon}" Text="{Binding Text}" Command="{Binding Command}" CommandParameter="{Binding Text}" />
+                        </DataTemplate>
+                    </BindableLayout.ItemTemplate>
+                </StackLayout>
+                <controls:ExpandableContentView FirstIcon="{Binding IconClock}" Text="{Binding TextExpand}" SecondIcon="{Binding IconExpand}">
+                    <controls:ExpandableContentView.TemplateContent>
+                        <StackLayout Padding="60,0,0,16" BindableLayout.ItemsSource="{Binding ListExpand}">
+                            <BindableLayout.ItemTemplate>
+                                <DataTemplate>
+                                    <Label Text="{Binding .}" FontSize="16" TextColor="Black" />
+                                </DataTemplate>
+                            </BindableLayout.ItemTemplate>
+                        </StackLayout>
+                    </controls:ExpandableContentView.TemplateContent>
+                </controls:ExpandableContentView>
+            </StackLayout>
+        </ScrollView>
+    </StackLayout>
+    
+</ContentPage>

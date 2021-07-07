@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:expandable="clr-namespace:Expandable;assembly=ExpandableView"
+             x:Name="this"
+             x:Class="ValdemoroEn1.Controls.ExpandableContentView">
+    <ContentView.Content>
+        <expandable:ExpandableView ExpandAnimationLength="100" StatusChanged="OnStatusChanged">
+            <expandable:ExpandableView.PrimaryView>
+                <Grid Style="{StaticResource gridGeneral}">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="26"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="26"/>
+                    </Grid.ColumnDefinitions>
+                    <Label Style="{StaticResource iconLabelList}" Grid.Row="0" Grid.Column="0" Text="{Binding Source={x:Reference this}, Path=FirstIcon}" FontFamily="FontAwesomeSolid" />
+                    <Label Style="{StaticResource labelList}" Grid.Row="0" Grid.Column="1" Text="{Binding Source={x:Reference this}, Path=Text}" />
+                    <Label Style="{StaticResource iconLabelList}" Grid.Row="0" Grid.Column="2" Text="{Binding Source={x:Reference this}, Path=SecondIcon}" FontFamily="FontAwesomeSolid" />
+                </Grid>
+            </expandable:ExpandableView.PrimaryView>
+            <expandable:ExpandableView.SecondaryViewTemplate>
+                <DataTemplate>
+                    <ContentView Content="{Binding Source={x:Reference this}, Path=TemplateContent}" />
+                </DataTemplate>
+            </expandable:ExpandableView.SecondaryViewTemplate>
+        </expandable:ExpandableView>
+    </ContentView.Content>
+</ContentView>
+   

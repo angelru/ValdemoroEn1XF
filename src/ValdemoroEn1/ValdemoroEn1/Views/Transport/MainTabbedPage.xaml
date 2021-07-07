@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            xmlns:pages="clr-namespace:ValdemoroEn1.Views"
+            xmlns:android="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific;assembly=Xamarin.Forms.Core"
+            xmlns:fontawesome="clr-namespace:FontAwesome"
+            android:TabbedPage.ToolbarPlacement="Bottom"
+            BarTextColor="{StaticResource redGeneralColor}"
+            Title="Transporte"
+            x:Class="ValdemoroEn1.Views.MainTabbedPage">
+
+    <TabbedPage.Children>
+        <pages:BusTransportTabPage Title="Tiempo real">
+            <pages:BusTransportTabPage.IconImageSource>
+                <FontImageSource Glyph="{Static fontawesome:FontAwesomeIcons.BusAlt}" FontFamily="FontAwesomeSolid" />
+            </pages:BusTransportTabPage.IconImageSource>
+        </pages:BusTransportTabPage>
+        <pages:MapsBusTransportTabPage Title="Mapas">
+            <pages:MapsBusTransportTabPage.IconImageSource>
+                <FontImageSource Glyph="{Static fontawesome:FontAwesomeIcons.BusAlt}" FontFamily="FontAwesomeSolid" />
+            </pages:MapsBusTransportTabPage.IconImageSource>
+        </pages:MapsBusTransportTabPage>
+    </TabbedPage.Children>
+
+</TabbedPage>

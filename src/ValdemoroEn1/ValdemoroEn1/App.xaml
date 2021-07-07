@@ -1,0 +1,155 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<prism:PrismApplication xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:prism="clr-namespace:Prism.Unity;assembly=Prism.Unity.Forms"
+             xmlns:behaviors="clr-namespace:ValdemoroEn1.Behaviors"
+             xmlns:fontawesome="clr-namespace:FontAwesome"
+             x:Class="ValdemoroEn1.App">
+    <Application.Resources>
+
+        <!-- Application resource dictionary -->
+
+        <ResourceDictionary>
+            <!-- Colors -->
+
+            <Color x:Key="redGeneralColor">#bd2a33</Color>
+            <Color x:Key="blueGeneralColor">#043465</Color>
+
+            <Color x:Key="redColor">Red</Color>
+            <Color x:Key="blackColor">Black</Color>
+            <Color x:Key="whiteColor">White</Color>
+            <Color x:Key="greenColor">Green</Color>
+
+            <!-- Entry -->
+
+            <Style x:Key="entryGeneral" TargetType="Entry">
+                <Setter Property="TextColor" Value="{StaticResource blackColor}" />
+                <Setter Property="behaviors:LineColorBehavior.ApplyLineColor" Value="True" />
+                <Setter Property="behaviors:LineColorBehavior.LineColor" Value="{StaticResource blueGeneralColor}" />
+                <Style.Triggers>
+                    <Trigger TargetType="Entry"
+                             Property="IsFocused" 
+                             Value="True">
+                        <Setter Property="Opacity" Value="1" />
+                    </Trigger>
+                </Style.Triggers>
+            </Style>
+
+            <Style x:Key="entryProfile" BasedOn="{StaticResource entryGeneral}" TargetType="Entry">
+                <Setter Property="VerticalOptions" Value="CenterAndExpand" />
+                <Setter Property="HorizontalOptions" Value="FillAndExpand" />
+            </Style>
+
+            <!-- Frame -->
+
+            <Style x:Key="frameGeneral" TargetType="Frame">
+                <Setter Property="BackgroundColor" Value="{StaticResource whiteColor}" />
+                <Setter Property="Margin" Value="0"/>
+                <Setter Property="Padding" Value="0"/>
+            </Style>
+
+            <!-- Button -->
+
+            <Style x:Key="buttonGeneral" TargetType="Button">
+                <Setter Property="TextColor" Value="{StaticResource whiteColor}" />
+                <Setter Property="BackgroundColor" Value="{StaticResource redGeneralColor}" />
+                <Setter Property="CornerRadius" Value="60"/>
+            </Style>
+
+            <Style x:Key="buttonMapTransport" BasedOn="{StaticResource buttonGeneral}" TargetType="Button">
+                <Setter Property="VerticalOptions" Value="Center" />
+                <Setter Property="HorizontalOptions" Value="Center" />
+                <Setter Property="FontSize" Value="Micro" />
+                <Setter Property="FontAttributes" Value="Bold" />
+                <Setter Property="WidthRequest" Value="75" />
+            </Style>
+
+            <Style x:Key="buttonSelectMapTransport" TargetType="Button">
+                <Setter Property="FontSize" Value="50" />
+                <Setter Property="CornerRadius" Value="10" />
+                <Setter Property="HeightRequest" Value="150" />
+                <Setter Property="WidthRequest" Value="150" />
+                <Setter Property="Text" Value="{Static fontawesome:FontAwesomeIcons.BusAlt}" />
+                <Setter Property="FontFamily" Value="FontAwesomeSolid" />
+            </Style>
+
+            <!-- StackLayout -->
+
+            <Style x:Key="stackGeneral" TargetType="StackLayout">
+                <Setter Property="Padding" Value="16" />
+                <Setter Property="Spacing" Value="16" />
+            </Style>
+
+            <Style x:Key="stackEndGeneral" TargetType="StackLayout">
+                <Setter Property="VerticalOptions" Value="EndAndExpand" />
+                <Setter Property="Spacing" Value="18" />
+            </Style>
+
+            <!-- Grid -->
+
+            <Style x:Key="gridGeneral" TargetType="Grid">
+                <Setter Property="BackgroundColor" Value="#FAFAFA" />
+                <Setter Property="Padding" Value="16" />
+                <Setter Property="ColumnSpacing" Value="16" />
+            </Style>
+
+            <!-- ListView -->
+
+            <Style x:Key="listViewGeneral" TargetType="ListView">
+                <Setter Property="HasUnevenRows" Value="True" />
+                <Setter Property="RowHeight" Value="60" />
+                <Setter Property="SeparatorVisibility" Value="None" />
+                <Setter Property="VerticalScrollBarVisibility" Value="Never" />
+            </Style>
+
+            <!-- Label -->
+
+            <Style x:Key="labelGeneral" TargetType="Label">
+                <Setter Property="FontSize" Value="16" />
+            </Style>
+
+            <Style x:Key="labelProfile" TargetType="Label">
+                <Setter Property="HorizontalTextAlignment" Value="Start" />
+                <Setter Property="TextColor" Value="{StaticResource whiteColor}" />
+                <Setter Property="FontAttributes" Value="Bold" />
+            </Style>
+
+            <Style x:Key="labelTitleFrame" BasedOn="{StaticResource labelGeneral}" TargetType="Label">
+                <Setter Property="Margin" Value="16,10,0,10" />
+                <Setter Property="TextColor" Value="{StaticResource redGeneralColor}" />
+                <Setter Property="FontAttributes" Value="Bold" />
+            </Style>
+
+            <Style x:Key="labelUrl" BasedOn="{StaticResource labelGeneral}" TargetType="Label">
+                <Setter Property="TextDecorations" Value="Underline" />
+                <Setter Property="FontAttributes" Value="Bold" />
+            </Style>
+
+            <Style x:Key="labelList" BasedOn="{StaticResource labelGeneral}" TargetType="Label">
+                <Setter Property="VerticalTextAlignment" Value="Center" />
+                <Setter Property="TextColor" Value="{StaticResource blackColor}" />
+                <Setter Property="LineBreakMode" Value="TailTruncation" />
+            </Style>
+
+            <Style x:Key="labelTransport" BasedOn="{StaticResource labelGeneral}" TargetType="Label">
+                <Setter Property="VerticalTextAlignment" Value="Center" />
+                <Setter Property="TextColor" Value="{StaticResource blackColor}" />
+            </Style>
+
+            <!-- Icons -->
+
+            <Style x:Key="iconLabelList" TargetType="Label">
+                <Setter Property="VerticalTextAlignment" Value="Center" />
+                <Setter Property="FontSize" Value="20" />
+            </Style>
+
+            <Style x:Key="iconTransport" TargetType="Label">
+                <Setter Property="VerticalTextAlignment" Value="Center" />
+                <Setter Property="HorizontalTextAlignment" Value="End" />
+                <Setter Property="FontSize" Value="20" />
+            </Style>
+
+        </ResourceDictionary>
+
+    </Application.Resources>
+</prism:PrismApplication>

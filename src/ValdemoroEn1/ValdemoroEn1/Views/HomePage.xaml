@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:controls="clr-namespace:ValdemoroEn1.Controls" 
+             x:Class="ValdemoroEn1.Views.HomePage"
+             Title="Ayuda">
+    <ScrollView>
+        <StackLayout Style="{StaticResource stackGeneral}">
+            <controls:FrameView Title="Información">
+                <controls:FrameView.CardContent>
+                    <StackLayout Padding="16">
+                        <Label Style="{StaticResource labelGeneral}" Text="ValdemoroEn1 ha sido creado con la finalidad de ofrecer a los ciudadanos un acceso más directo a los establecimientos de Valdemoro." />
+                    </StackLayout>
+                </controls:FrameView.CardContent>
+            </controls:FrameView>
+            <controls:FrameView Title="Google">
+                <controls:FrameView.CardContent>
+                    <StackLayout Padding="16">
+                        <Label Style="{StaticResource labelGeneral}" Text="Las imágenes aquí mostradas, títulos, textos descriptivos o números de teléfono, es información pública ofrecida por Google, ValdemoroEn1 solo se límita a mostrar los datos." />
+                        <Label Style="{StaticResource labelUrl}">
+                            <Label.FormattedText>
+                                <FormattedString>
+                                    <Span Text="Consulte los términos y condiciones ">
+                                        <Span.GestureRecognizers>
+                                            <TapGestureRecognizer Command="{Binding OpenURLCommand}" CommandParameter="{Binding TermsGoogleURL}" />
+                                        </Span.GestureRecognizers>
+                                    </Span>
+                                    <Span Text="y la política de privacidad de Google.">
+                                        <Span.GestureRecognizers>
+                                            <TapGestureRecognizer Command="{Binding OpenURLCommand}" CommandParameter="{Binding PrivacyGoogleURL}" />
+                                        </Span.GestureRecognizers>
+                                    </Span>
+                                </FormattedString>
+                            </Label.FormattedText>
+                        </Label>
+                    </StackLayout>
+                </controls:FrameView.CardContent>
+            </controls:FrameView>
+            <controls:FrameView Title="Transporte">
+                <controls:FrameView.CardContent>
+                    <StackLayout Padding="16">
+                        <Label Style="{StaticResource labelGeneral}" Text="Acceso a los horarios del transporte público. Se trata de mostrar los datos de forma sencilla y contrastada con fuentes oficiales del CRTM pero de forma particular, es decir, no hay ningún vínculo con el consorcio." />
+                        <Label Style="{StaticResource labelUrl}" Text="Para más información en la web oficial de CRTM.">
+                            <Label.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding OpenURLCommand}" CommandParameter="{Binding CitramURL}" />
+                            </Label.GestureRecognizers>
+                        </Label>
+                    </StackLayout>
+                </controls:FrameView.CardContent>
+            </controls:FrameView>
+            <controls:FrameView Title="Contacto">
+                <controls:FrameView.CardContent>
+                    <StackLayout Padding="16">
+                        <Label Style="{StaticResource labelGeneral}" Text="Para cualquier asunto, error o queja." />
+                        <Label Style="{StaticResource labelUrl}" Text="Contactar por correo electrónico.">
+                            <Label.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding SendEmailCommand}" />
+                            </Label.GestureRecognizers>
+                        </Label>
+                    </StackLayout>
+                </controls:FrameView.CardContent>
+            </controls:FrameView>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>
