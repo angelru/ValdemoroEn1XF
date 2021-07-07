@@ -16,9 +16,9 @@ He decidido publicar el código fuente de mi primera aplicación en **Xamarin Fo
 * [GoogleClientPlugin](https://github.com/CrossGeeks/GoogleClientPlugin)
 
 # Images
-![menu](/images/menu.png?raw=true) ![list](/images/list.png?raw=true)
-![transport](/images/transport.png?raw=true) ![realtimetransport](/images/realtimetransport.png?raw=true)
-![urban](/images/urban.png?raw=true) ![interurban](/images/interurban.png?raw=true)
+![menu](/images/menu.png?raw=true) | ![list](/images/list.png?raw=true)
+![transport](/images/transport.png?raw=true) | ![realtimetransport](/images/realtimetransport.png?raw=true)
+![urban](/images/urban.png?raw=true) | ![interurban](/images/interurban.png?raw=true)
 
 # Copyright and license
 Code released under the [MIT license](https://opensource.org/licenses/MIT)
