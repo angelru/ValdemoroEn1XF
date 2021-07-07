@@ -1,9 +1,14 @@
 # ValdemoroEn1
-Una aplicación para los ciudadanos de **Valdemoro** creada en **Xamarin Forms.**
+ValdemoroEn1 es una gran agenda-base de datos que se irá llenando poco a poco, su funcionamiento es simple, elige la categoría/servicio y una vez dentro y mostrado los datos, podrás llamar al pulsar el icono de la llamada o número, también podrás hacer streetview en el mapa de google maps, ver horarios y fotos del establecimiento.
 
-# Description
+Además podrás consultar el horario en tiempo real de los autobuses urbanos e interurbanos, localiza el número de parada en la marquesina y consulta el tiempo.
+
+También podrás consultar los horarios en formato PDF.
+
+# History
 He decidido publicar el código fuente de mi primera aplicación en **Xamarin Forms**, es un proyecto que empecé con mucha ilusión por el **2015** en **PhoneGap**, pero en **2017** decidí pasarlo a **Xamarin Forms**, tiene muchas partes que no están actualizadas, pero cuando tenga tiempo ire mejorando el código acorde con los tiempos que corren.
 
+# Google API and Firebase Auth
 Utilizo la api de google para sacar los resultados y la autenticación con firebase.
 * [Places](https://developers.google.com/maps/documentation/places/web-service/overview)
 * [Auth](https://firebase.google.com/docs/auth)
