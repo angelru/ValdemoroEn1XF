@@ -42,4 +42,6 @@ Utilizo la api de google para sacar los resultados y la autenticación con fireb
 [Android](https://play.google.com/store/apps/details?id=es.valtimoretec.valdemoroenuno)
 
 # Copyright and license
+Copyright 2021 by Angelru
+
 Code released under the [MIT license](https://opensource.org/licenses/MIT)
