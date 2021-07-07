@@ -6,7 +6,7 @@ Además podrás consultar el horario en tiempo real de los autobuses urbanos e i
 También podrás consultar los horarios en formato PDF.
 
 # History
-He decidido publicar el código fuente de mi primera aplicación en **Xamarin Forms**, es un proyecto que empecé con mucha ilusión por el **2015** en **PhoneGap**, pero en **2017** decidí pasarlo a **Xamarin Forms**, tiene muchas partes que no están actualizadas, pero cuando tenga tiempo ire mejorando el código acorde con los tiempos que corren.
+He decidido publicar el código fuente de mi primera aplicación en **Xamarin Forms**, es un proyecto que empecé con mucha ilusión por el **2015** en **PhoneGap**, pero en **2017** decidí pasarlo a **Xamarin Forms**, tiene muchas partes que no están actualizadas y a parte, hay que hacerlas de otras maneras, pero cuando tenga tiempo ire mejorando el código acorde con los tiempos que corren.
 
 # Google API and Firebase Auth
 Utilizo la api de google para sacar los resultados y la autenticación con firebase.
