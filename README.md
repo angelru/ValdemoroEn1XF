@@ -1,4 +1,8 @@
 # ValdemoroEn1
+<p align="center">
+  <img src ="/images/logo.png?raw=true" width="200" />
+</p>
+
 Es una gran agenda-base de datos que se irá llenando poco a poco, su funcionamiento es simple, elige la categoría/servicio y una vez dentro y mostrado los datos, podrás llamar al pulsar el icono de la llamada o número, también podrás hacer streetview en el mapa de google maps, ver horarios y fotos del establecimiento.
 
 Además podrás consultar el horario en tiempo real de los autobuses urbanos e interurbanos, localiza el número de parada en la marquesina y consulta el tiempo.
