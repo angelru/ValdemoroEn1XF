@@ -94,12 +94,12 @@ namespace ValdemoroEn1.ViewModels
         {
             CanNavigate = false;
             var result = await UserDialogs.Instance.ActionSheetAsync(GlobalSettings.Choose, GlobalSettings.Cancel, null, null, GlobalSettings.TextCamera, GlobalSettings.TextGallery);
-            
+
             if (result is GlobalSettings.TextCamera)
             {
                 try
                 {
-                    var photo = await MediaPicker.CapturePhotoAsync();
+                    _photo = await MediaPicker.CapturePhotoAsync();
                 }
                 catch (FeatureNotSupportedException fnsEx)
                 {
