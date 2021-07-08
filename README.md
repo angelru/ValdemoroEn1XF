@@ -60,7 +60,9 @@ Google API to get results and authenticate with Firebase.
 <img src ="/images/urban.png?raw=true" width="200" /> <img src ="/images/interurban.png?raw=true" width="200" />
 
 # Download
-[Android](https://play.google.com/store/apps/details?id=es.valtimoretec.valdemoroenuno)
+<a href="https://play.google.com/store/apps/details?id=es.valtimoretec.valdemoroenuno" target="_blank">
+  <img width="200" src="/images/googleplay.png?raw=true"/>
+</a>
 
 # Copyright and license
 Copyright 2021 by Angelru
