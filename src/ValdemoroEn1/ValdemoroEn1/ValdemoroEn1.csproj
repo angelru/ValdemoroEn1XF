@@ -18,18 +18,18 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Acr.UserDialogs" Version="7.1.0.514" />
+    <PackageReference Include="Acr.UserDialogs" Version="7.2.0.534" />
     <PackageReference Include="akavache" Version="7.3.1" />
     <PackageReference Include="CardsView" Version="2.8.0" />
     <PackageReference Include="ExpandableView" Version="1.0.10" />
-    <PackageReference Include="GoogleApi" Version="3.10.11" />
+    <PackageReference Include="GoogleApi" Version="4.0.1" />
     <PackageReference Include="Plugin.FirebaseAuth" Version="4.1.0" />
     <PackageReference Include="Plugin.GoogleClient" Version="2.1.12" />
-    <PackageReference Include="Xamarin.Essentials" Version="1.6.1" />
+    <PackageReference Include="Xamarin.Essentials" Version="1.7.0" />
     <PackageReference Include="Xamarin.FFImageLoading" Version="2.4.11.982" />
     <PackageReference Include="Xamarin.FFImageLoading.Forms" Version="2.4.11.982" />
     <PackageReference Include="Xamarin.FFImageLoading.Transformations" Version="2.4.11.982" />
-    <PackageReference Include="Xamarin.Forms" Version="5.0.0.2012" />
+    <PackageReference Include="Xamarin.Forms" Version="5.0.0.2125" />
     <PackageReference Include="Prism.Unity.Forms" Version="8.1.97" />
   </ItemGroup>
 
