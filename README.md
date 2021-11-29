@@ -19,7 +19,7 @@ Your services in Valdemoro, all the information in one place.
 * **Train.** Schedule real-time. Coming soon
 
 # History
-Decido publicar el código fuente de mi primera aplicación en **[Xamarin Forms](https://docs.microsoft.com/en-us/xamarin/get-started/what-is-xamarin-forms)** porque creo en el trabajo en comunidad, en que todas las personas aportemos nuestro granito de arena para el avance del código libre y así aumentar nuestros conocimientos.
+Decido publicar el código fuente de mi primera aplicación en **[Xamarin Forms](https://docs.microsoft.com/en-us/xamarin/get-started/what-is-xamarin-forms)** porque creo en el trabajo en comunidad, en que todas las personas aportemos nuestro granito de arena para el avance del código abierto y así aumentar nuestros conocimientos.
 
 **ValdemoroEn1** es un proyecto que empecé con mucha ilusión por el 2015 en PhoneGap, pero en 2017 decidí pasarlo a **[Xamarin Forms](https://docs.microsoft.com/en-us/xamarin/get-started/what-is-xamarin-forms)**, en el presente tiene muchas partes que no están actualizadas.
 Mi planteamiento es poder ir actualizando y mejorando algunos aspectos que hay que reenfocar.
